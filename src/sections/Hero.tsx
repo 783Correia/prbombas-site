@@ -24,7 +24,7 @@ export default function Hero() {
       />
 
       {/* Conteúdo */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-24 pb-8">
+      <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-24 pb-16 sm:pb-24">
 
         {/* Badge */}
         <div className="fade-in inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs text-white/60 mb-6 sm:mb-8 border-glow">
