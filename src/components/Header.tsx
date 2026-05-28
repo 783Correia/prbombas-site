@@ -41,7 +41,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0 flex items-center gap-2.5">
+        <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0 flex items-center gap-2.5">
           <Image
             src="/logo/logo-icon-blue.png"
             alt=""
