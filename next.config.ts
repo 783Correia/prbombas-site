@@ -1,7 +1,22 @@
 import type { NextConfig } from "next";
 
+const securityHeaders = [
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+]
+
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  reactStrictMode: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    qualities: [75, 90],
+  },
+  async headers() {
+    return [{ source: "/(.*)", headers: securityHeaders }]
+  },
+}
 
 export default nextConfig;
