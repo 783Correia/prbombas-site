@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   },
   description: site.descricao,
   keywords: ["bomba submersa", "bomba submersa vibratória", "fabricante bomba submersa brasil", "bomba para poço", "PR Bombas", "Pouso Redondo"],
+  icons: {
+    icon: "/logo/logo-icon-blue.png",
+    apple: "/logo/logo-icon-blue.png",
+    shortcut: "/logo/logo-icon-blue.png",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -27,7 +32,13 @@ export const metadata: Metadata = {
     siteName: site.nome,
     title: `${site.nome} | Bombas Submersas Feitas no Brasil desde 1983`,
     description: site.descricao,
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "PR Bombas — Bombas Submersas Feitas no Brasil" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.nome} | Bombas Submersas Feitas no Brasil desde 1983`,
+    description: site.descricao,
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: site.url },
